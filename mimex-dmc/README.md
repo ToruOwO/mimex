@@ -1,6 +1,6 @@
 ## MIMEx: Intrinsic Rewards from Masked Input Modeling
 
-This is the code for paper [MIMEx: Intrinsic Rewards from Masked Input Modeling](TODO). It contains the training code to reproduce all results on DeepMind Control Suite.
+This is the code for paper [MIMEx: Intrinsic Rewards from Masked Input Modeling](https://arxiv.org/abs/2305.08932). It contains the training code to reproduce all results on DeepMind Control Suite.
 
 The RL code is built on top of [DrQ-v2](https://arxiv.org/abs/2107.09645).
 

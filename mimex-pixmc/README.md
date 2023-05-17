@@ -1,6 +1,6 @@
 ## MIMEx: Intrinsic Rewards from Masked Input Modeling
 
-This is the code for paper [MIMEx: Intrinsic Rewards from Masked Input Modeling](TODO). It contains the PixMC-Sparse benchmark suite and the training code to reproduce all results on PixMC-Sparse environment.
+This is the code for paper [MIMEx: Intrinsic Rewards from Masked Input Modeling](https://arxiv.org/abs/2305.08932). It contains the PixMC-Sparse benchmark suite and the training code to reproduce all results on PixMC-Sparse environment.
 
 The RL code is built on top of [MVP](https://arxiv.org/abs/2203.06173).
 
