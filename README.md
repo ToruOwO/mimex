@@ -2,6 +2,8 @@
 
 This repo contains the PyTorch implementation for all methods and environments in the paper [MIMEx: Intrinsic Rewards from Masked Input Modeling](https://arxiv.org/abs/2305.08932)
 
+[TL;DR [tweet](https://twitter.com/ToruO_O/status/1658637431619604481)]
+
 by [Toru Lin](https://toruowo.github.io/) and [Allan Jabri](https://ajabri.github.io/).
 
 ### Code layout
