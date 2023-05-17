@@ -1,0 +1,10 @@
+expl_cfg:
+  seq_expl_len: 1  # >0 to enable
+  k_expl: 0.01
+  norm_loss: false
+  use_actor_feat: false
+  use_ema_encoder: false
+  ema_tau: 1.0  # always use latest encoder
+  lr: 1e-4
+  embed_dim: 128
+  baseline: 'rnd'

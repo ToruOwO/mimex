@@ -1,0 +1,33 @@
+
+physics_engine: "physx"
+pipeline: "gpu"
+sim_device: ???
+rl_device: ???
+graphics_device_id: 0
+num_gpus: 1
+
+test: False
+resume: 0
+logdir: /home
+cptdir: ""
+headless: True
+exp_name: "exp"
+exp: "t"
+wandb_mode: "online"  # "online" | "offline" | "disabled"
+
+save_latest_video: False
+
+action_noise_cfg:
+  type: "learned"  # "learned" | "scheduled" | "none"
+  schedule: 'linear(1.0,0.1,16000)'  # for Reach
+
+defaults:
+  - task: FrankaPick
+  - train: ${task}
+  - expl_cfg: no_expl
+  - hydra/job_logging: disabled
+
+hydra:
+  output_subdir: null
+  run:
+    dir: .

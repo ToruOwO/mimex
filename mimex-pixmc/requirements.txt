@@ -1,0 +1,8 @@
+gym
+hydra-core>=1.1
+iopath
+imageio-ffmpeg
+omegaconf
+setuptools
+tensorboard
+timm

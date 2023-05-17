@@ -1,0 +1,16 @@
+baseline: "none"
+input_type: "obs_feat"
+expl_seq_len: 2  # >=2 to enable
+k_expl: 0.05
+anneal_k: False
+mask_ratio: 0.5
+mask_all: false
+n_mask: 1
+norm_loss: false
+use_cls: true
+use_actor_feat: false
+bert_lr: 1e-4
+embed_dim: 128
+decoder_embed_dim: 64
+decoder_num_heads: 2
+decoder_depth: 1

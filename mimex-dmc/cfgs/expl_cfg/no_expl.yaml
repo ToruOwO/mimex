@@ -1,0 +1,14 @@
+expl_cfg:
+  seq_expl_len: 0  # >2 to enable
+  k_expl: 0.05
+  mask_ratio: 0.7
+  norm_loss: false
+  use_cls: true
+  use_actor_feat: false
+  use_ema_encoder: false
+  ema_tau: 1.0  # always use latest encoder
+  bert_lr: 1e-4
+  embed_dim: 128
+  decoder_embed_dim: 64
+  decoder_num_heads: 2
+  decoder_depth: 1

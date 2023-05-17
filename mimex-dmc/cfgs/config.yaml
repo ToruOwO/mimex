@@ -1,0 +1,69 @@
+defaults:
+  - _self_
+  - task@_global_: walker_run
+  - agent@_global_: drqv2
+  - expl_cfg@_global_: no_expl
+
+# task settings
+frame_stack: 3
+action_repeat: 2
+discount: 0.99
+# train settings
+num_seed_frames: 4000
+# eval
+eval_every_frames: 10000
+save_video_every_evals: 5
+num_eval_episodes: 10
+# snapshot
+save_snapshot: false
+# replay buffer
+replay_buffer_size: 1000000
+replay_buffer_num_workers: 4
+nstep: 1
+batch_size: 1024
+# misc
+seed: 1
+device: cuda
+load_ckpt_path: ''
+save_best_ckpt: true
+save_video: true
+save_train_video: false
+use_tb: true
+# experiment
+experiment: exp
+# agent
+lr: 1e-4
+feature_dim: 50
+
+wandb_mode: "online"  # "online" | "offline" | "disabled"
+
+# sequence exploration
+expl_cfg:
+  seq_type: 'pad2'  # 'full' | 'pad' | 'full2' | 'pad2'
+  seq_expl_len: 0  # >0 to enable
+  k_expl: 0.05
+  mask_ratio: 0.7
+  norm_loss: false
+  use_cls: true
+  use_actor_feat: false
+  use_ema_encoder: false
+  ema_tau: 1.0  # always use latest encoder
+  bert_lr: 1e-4
+  embed_dim: 128
+  decoder_embed_dim: 64
+  decoder_num_heads: 2
+  decoder_depth: 1
+  n_masks: 1
+  baseline: 'none'  # 'none' | 'icm' | 'rnd'
+
+encoder_cfg:
+  encoder_type: 'drq'  # 'drq' | 'vit' | 'mae'
+  aug_type: 'drq'  # 'drq' | 'mae'
+  patch_size: 4
+  base_lr: 0.001
+  weight_decay: 0.05
+  batch_size: ${batch_size}
+
+hydra:
+  run:
+    dir: /home/exp-${expl_cfg.baseline}/${now:%Y-%m-%d-%H%M%S}_${hydra.job.override_dirname}
